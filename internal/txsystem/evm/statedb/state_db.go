@@ -8,7 +8,7 @@ import (
 	"log/slog"
 	"sort"
 
-	"github.com/alphabill-org/alphabill-go-base/txsystem/evm"
+	"github.com/alphabill-org/alphabill-evm/txsystem/evm"
 	"github.com/alphabill-org/alphabill-go-base/types"
 	"github.com/alphabill-org/alphabill/logger"
 	"github.com/alphabill-org/alphabill/state"

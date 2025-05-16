@@ -8,7 +8,7 @@ import (
 	"math/big"
 
 	"github.com/alphabill-org/alphabill-evm/internal/txsystem/evm/statedb"
-	evmsdk "github.com/alphabill-org/alphabill-go-base/txsystem/evm"
+	evmsdk "github.com/alphabill-org/alphabill-evm/txsystem/evm"
 	"github.com/alphabill-org/alphabill-go-base/types"
 	"github.com/alphabill-org/alphabill-go-base/util"
 	"github.com/alphabill-org/alphabill/keyvaluedb"

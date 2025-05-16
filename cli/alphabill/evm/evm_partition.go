@@ -10,7 +10,7 @@ import (
 
 	util "github.com/ipfs/go-ipfs-util"
 
-	evmsdk "github.com/alphabill-org/alphabill-go-base/txsystem/evm"
+	evmsdk "github.com/alphabill-org/alphabill-evm/txsystem/evm"
 	"github.com/alphabill-org/alphabill-go-base/types"
 	"github.com/alphabill-org/alphabill/cli/alphabill/cmd"
 	"github.com/alphabill-org/alphabill/partition"

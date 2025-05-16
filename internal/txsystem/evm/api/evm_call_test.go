@@ -15,7 +15,7 @@ import (
 	"github.com/holiman/uint256"
 	"github.com/stretchr/testify/require"
 
-	evmsdk "github.com/alphabill-org/alphabill-go-base/txsystem/evm"
+	evmsdk "github.com/alphabill-org/alphabill-evm/txsystem/evm"
 	"github.com/alphabill-org/alphabill-go-base/types"
 	"github.com/alphabill-org/alphabill/keyvaluedb/memorydb"
 	"github.com/alphabill-org/alphabill/rpc"

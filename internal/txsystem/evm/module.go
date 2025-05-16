@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"log/slog"
 
-	"github.com/alphabill-org/alphabill-go-base/txsystem/evm"
+	"github.com/alphabill-org/alphabill-evm/txsystem/evm"
 	"github.com/alphabill-org/alphabill-go-base/types"
 	txtypes "github.com/alphabill-org/alphabill/txsystem/types"
 	"github.com/ethereum/go-ethereum/core"
