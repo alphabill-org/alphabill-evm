@@ -3,7 +3,7 @@ module github.com/alphabill-org/alphabill-evm
 go 1.24.1
 
 require (
-	github.com/alphabill-org/alphabill v1.0.2-0.20250514123620-63af3127e751
+	github.com/alphabill-org/alphabill v1.0.2-0.20250519100305-0470cb6446fc
 	github.com/alphabill-org/alphabill-go-base v1.0.0-rc2.0.20250519095234-2160e35d7afb
 	github.com/ethereum/go-ethereum v1.14.11
 	github.com/gorilla/mux v1.8.1
