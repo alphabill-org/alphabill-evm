@@ -13,8 +13,6 @@ jobs:
         uses: actions/setup-go@v5
         with:
           go-version: '1.24.1'
-      - name: Install dependencies
-        run: go get .
       - name: Build
         run: cd ./cli/alphabill && go build -o ../../build/alphabill
 
