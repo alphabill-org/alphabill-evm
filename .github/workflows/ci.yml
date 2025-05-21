@@ -14,8 +14,20 @@ jobs:
       - name: Build
         run: cd ./cli/alphabill && go build -o ../../build/alphabill
 
-  test:
+  vet:
     needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Go 1.24.1
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.24.1'
+      - name: Vet
+        run: go vet ./...
+
+  test:
+    needs: vet
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
