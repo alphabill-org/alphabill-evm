@@ -1,4 +1,4 @@
-name: Build
+name: ci
 
 on: [push]
 
@@ -14,7 +14,7 @@ jobs:
       - name: build
         run: cd ./cli/alphabill && go build -o ../../build/alphabill
 
-  test:
+  vet:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -24,6 +24,16 @@ jobs:
           go-version: '1.24.1'
       - name: vet
         run: go vet ./...
+
+  test:
+    needs: vet
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Go 1.24.1
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.24.1'
       - name: test
         run: go test ./... -coverpkg=./... -count=1 -coverprofile test-coverage.out
 
