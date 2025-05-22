@@ -13,6 +13,12 @@ jobs:
           go-version: '1.24.1'
       - name: build
         run: cd ./cli/alphabill && go build -o ../../build/alphabill
+      - name: upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: build
+          path: build
+          retention-days: 1
 
   vet:
     runs-on: ubuntu-latest
