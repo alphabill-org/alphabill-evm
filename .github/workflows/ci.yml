@@ -61,3 +61,13 @@ jobs:
           name: gosec-report
           path: gosec_report.json
           retention-days: ${{ env.RETENTION-DAYS }}
+
+  staticcheck:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 1
+    - uses: dominikh/staticcheck-action@v1
+      with:
+        version: "latest"
