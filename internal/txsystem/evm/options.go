@@ -89,8 +89,7 @@ func WithMoneyPartitionID(moneyPartitionID types.PartitionID) Option {
 
 func WithGasPrice(gasPrice uint64) Option {
 	return func(o *Options) {
-		// todo: conversion problem uint64 -> int64, make sure that argument over int64 max is not provided
-		o.gasUnitPrice = big.NewInt(int64(gasPrice))
+		o.gasUnitPrice.SetUint64(gasPrice)
 	}
 }
 
