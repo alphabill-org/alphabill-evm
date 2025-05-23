@@ -48,10 +48,4 @@ jobs:
       - name: Install gosec
         run: go install github.com/securego/gosec/v2/cmd/gosec@latest
       - name: gosec
-        run: gosec -fmt=sonarqube -out gosec_report.json ./...
-      - name: upload gosec report
-        uses: actions/upload-artifact@v4
-        with:
-          name: gosec-report
-          path: gosec_report.json
-          retention-days: ${{ env.RETENTION-DAYS }}
+        run: gosec ./...
