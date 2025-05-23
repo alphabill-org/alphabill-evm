@@ -17,12 +17,6 @@ jobs:
           go-version: ${{ env.GO_VERSION }}
       - name: build
         run: cd ./cli/alphabill && go build -o ../../build/alphabill
-      - name: upload build artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: build
-          path: build
-          retention-days: ${{ env.RETENTION-DAYS }}
 
   test:
     runs-on: ubuntu-latest
